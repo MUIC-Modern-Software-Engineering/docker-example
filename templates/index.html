@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+</head>
+<body>
+    <h1>Message Board</h1>
+
+    <!-- Form to post messages -->
+    <form action="/post_message" method="post">
+        <label for="message">Enter your message:</label><br>
+        <textarea name="message" id="message" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Post Message">
+    </form>
+
+    <hr>
+
+    <!-- Display posted messages -->
+    <h2>Messages:</h2>
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
