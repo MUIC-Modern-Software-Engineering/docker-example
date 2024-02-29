@@ -22,4 +22,4 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-        - db-data:/var/lib/postgresql/data
+        - /root/docker-example/db-data:/var/lib/postgresql/data
